@@ -326,6 +326,49 @@ textarea:focus {
   }
 }
 
+.turing-footer {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  color: #555;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+.social-icon:nth-child(1):hover {
+  color: #e1306c;
+}
+.social-icon:nth-child(2):hover {
+  color: #000;
+}
+.social-icon:nth-child(3):hover {
+  color: #d44638;
+}
+.social-icon:nth-child(4):hover {
+  color: #0088cc;
+}
+.social-icon:nth-child(5):hover {
+  color: #ff0000;
+}
+
+.copyright-text {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -353,4 +396,3 @@ section:nth-child(3) {
 section:nth-child(4) {
   animation-delay: 0.4s;
 }
-
