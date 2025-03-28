@@ -7,8 +7,7 @@
 
 1. پروژه را کلون کنید:
 ```bash
-[git clone https://github.com/username/javascript-web-tutorial.git
-](https://github.com/kourosh07/JS-tutorial.git)
+https://github.com/kourosh07/JS-tutorial.git
 ```
 
 ## <img src="https://cdn.ituring.ir/research/76/turing%20(2).png" alt="pic" align="center" width="40px">
