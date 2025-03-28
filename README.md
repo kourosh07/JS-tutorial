@@ -2,7 +2,7 @@
 
  - <a href="https://github.com/kourosh07/JS-tutorial/blob/main/main.js" target="_blank"> Basic </a>
  - <a href="https://github.com/kourosh07/JS-tutorial/tree/main/JS%20in%20web" target="_blank"> JS in web </a>
- - <a href="https://github.com/kourosh07/JS-tutorial/tree/main/JS%20in%20web" target="_blank"> Project & Exercise </a>
+ - <a href="https://github.com/kourosh07/JS-tutorial/tree/main/Project%20%26%20Exercise" target="_blank"> Project & Exercise </a>
 
 
 ## 🚀 نحوه اجرا
