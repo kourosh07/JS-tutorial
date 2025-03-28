@@ -1,1 +1,356 @@
+@font-face {
+  font-family: Shabnam;
+  src: url("../fonts/Shabnam-FD.woff2") format("woff2");
+}
+
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --accent-color: #4895ef;
+  --danger-color: #f72585;
+  --success-color: #4cc9f0;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Shabnam, "Vazirmatn", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: #f5f7fa;
+  padding: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgb(14, 14, 14);
+  background: radial-gradient(
+    circle,
+    rgba(14, 14, 14, 1) 0%,
+    rgba(54, 54, 54, 1) 100%
+  );
+  color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+section {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h2 i {
+  font-size: 1.3rem;
+}
+
+h3 {
+  color: var(--secondary-color);
+  margin: 15px 0 10px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  margin: 5px;
+  font-family: Shabnam;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+}
+
+.box {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.item {
+  background-color: var(--success-color);
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.item:hover {
+  transform: translateX(5px);
+}
+
+.TUimg {
+  margin-bottom: -0.5rem;
+  height: 2rem;
+}
+
+#dynamicElements {
+  border: 2px dashed var(--accent-color);
+  padding: 15px;
+  min-height: 80px;
+  border-radius: var(--border-radius);
+  margin: 15px 0;
+  background-color: rgba(72, 149, 239, 0.1);
+}
+
+#mouseEventArea {
+  height: 120px;
+  background-color: var(--light-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  margin: 15px 0;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid var(--accent-color);
+}
+
+#mouseEventArea:hover {
+  background-color: #e9ecef;
+}
+
+#error {
+  color: var(--danger-color);
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: block;
+}
+
+#userData {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--success-color);
+}
+
+form {
+  margin-top: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(72, 149, 239, 0.2);
+}
+
+#itemList {
+  list-style: none;
+}
+
+#itemList li {
+  padding: 10px 15px;
+  margin: 5px 0;
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#itemList li:hover {
+  background-color: #e9ecef;
+}
+
+#itemList li i {
+  color: var(--primary-color);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #6c757d;
+  background-color: #e9ecef !important;
+}
+
+.counter {
+  display: inline-block;
+  min-width: 30px;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  padding: 3px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+.theme-switcher {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+.theme-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.theme-btn:hover {
+  transform: scale(1.1);
+}
+
+.dark-mode {
+  background-color: #1a1a2e;
+  color: #e6e6e6;
+}
+
+.dark-mode section {
+  background-color: #16213e;
+  color: #e6e6e6;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+  background-color: #0f3460;
+  color: #e6e6e6;
+  border-color: #1a1a2e;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 15px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+section:nth-child(1) {
+  animation-delay: 0.1s;
+}
+section:nth-child(2) {
+  animation-delay: 0.2s;
+}
+section:nth-child(3) {
+  animation-delay: 0.3s;
+}
+section:nth-child(4) {
+  animation-delay: 0.4s;
+}
 
