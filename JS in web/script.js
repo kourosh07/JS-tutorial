@@ -149,6 +149,7 @@ const userDataDiv = document.getElementById("userData");
 
 userForm.addEventListener("submit", function (e) {
   e.preventDefault();
+  userDataDiv.style.display = "block"
 
   const emailInput = document.getElementById("email");
   const nameInput = document.getElementById("name");
@@ -256,4 +257,3 @@ themeToggle.addEventListener("click", function () {
 const script = document.createElement("script");
 script.src = "https://cdn.jsdelivr.net/npm/sweetalert2@11";
 document.head.appendChild(script);
-
