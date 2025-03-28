@@ -1,1 +1,181 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.ituring.ir/research/76/turing%20%282%29.png"
+      type="image/x-icon"
+    />
+    <title>آموزش جاوااسکریپت</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="fas fa-code"></i> آموزش جاوااسکریپت</h1>
+        <p class="subtitle">
+          ارائه شده توسط تیم پژوهشی تورینگ
+          <img
+            src="https://cdn.ituring.ir/research/76/turing%20%282%29.png"
+            alt="tu"
+            class="TUimg"
+          />
+        </p>
+      </header>
+
+      <section id="section1">
+        <h2><i class="fas fa-info-circle"></i> مفاهیم پایه</h2>
+
+        <div class="form-group">
+          <button onclick="alert('این یک اسکریپت داخلی است!')" class="btn">
+            <i class="fas fa-code"></i> اسکریپت داخلی
+          </button>
+          <button id="externalScriptDemo" class="btn">
+            <i class="fas fa-external-link-alt"></i> اسکریپت اکسترنال
+          </button>
+        </div>
+
+        <p>
+          این بخش نشان می‌دهد چگونه می‌توان جاوااسکریپت را به صفحات وب اضافه
+          کرد.
+        </p>
+      </section>
+
+      <section id="section2">
+        <h2><i class="fas fa-tree"></i> دستکاری DOM</h2>
+
+        <h3><i class="fas fa-cube"></i> تغییر المان‌های موجود</h3>
+        <div class="box" id="demoBox">این یک جعبه نمونه است</div>
+        <button id="changeBox" class="btn">
+          <i class="fas fa-magic"></i> تغییر جعبه
+        </button>
+
+        <h3><i class="fas fa-plus-circle"></i> المان‌های داینامیک</h3>
+        <div id="dynamicElements">
+          <p style="color: #6c757d; text-align: center" id="noEl">
+            هیچ المانی وجود ندارد
+          </p>
+        </div>
+        <div>
+          <button id="addElement" class="btn btn-success">
+            <i class="fas fa-plus"></i> اضافه کردن
+          </button>
+          <button id="removeElement" class="btn btn-danger">
+            <i class="fas fa-minus"></i> حذف کردن
+          </button>
+        </div>
+      </section>
+
+      <section id="section3">
+        <h2><i class="fas fa-mouse-pointer"></i> رویدادها</h2>
+
+        <h3><i class="fas fa-hand-pointer"></i> رویداد کلیک</h3>
+        <button id="clickDemo" class="btn">
+          <i class="fas fa-mouse"></i> کلیک کنید
+        </button>
+        <p id="clickCounter">تعداد کلیک‌ها: <span class="counter">0</span></p>
+
+        <h3><i class="fas fa-arrows-alt"></i> رویدادهای ماوس</h3>
+        <div id="mouseEventArea">
+          <p>ماوس را اینجا حرکت دهید یا کلیک کنید</p>
+        </div>
+        <p id="mousePosition">
+          <i class="fas fa-map-marker-alt"></i> موقعیت ماوس:
+        </p>
+
+        <h3><i class="fas fa-tasks"></i> مدیریت رویدادها</h3>
+        <ul id="itemList">
+          <li><i class="fas fa-check"></i> آیتم لیست 1</li>
+          <li><i class="fas fa-check"></i> آیتم لیست 2</li>
+          <li><i class="fas fa-check"></i> آیتم لیست 3</li>
+        </ul>
+      </section>
+
+      <section id="section4">
+        <h2><i class="fas fa-edit"></i> فرم‌ها و اعتبارسنجی</h2>
+
+        <form id="userForm">
+          <div class="form-group">
+            <label for="name"><i class="fas fa-user"></i> نام کامل:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="نام خود را وارد کنید"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> ایمیل:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@domain.com"
+              required
+            />
+            <span id="error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="age"><i class="fas fa-birthday-cake"></i> سن:</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              min="18"
+              max="99"
+              placeholder="18-99"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="country"><i class="fas fa-globe"></i> کشور:</label>
+            <select id="country" name="country">
+              <option value="">انتخاب کنید</option>
+              <option value="IR">ایران</option>
+              <option value="US">آمریکا</option>
+              <option value="CA">کانادا</option>
+              <option value="UK">انگلیس</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message"><i class="fas fa-comment"></i> پیام:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="3"
+              placeholder="پیام شما..."
+            ></textarea>
+          </div>
+
+          <input type="submit" value="ارسال فرم" class="btn" />
+        </form>
+
+        <div id="userData"></div>
+
+        <h3><i class="fas fa-palette"></i> تغییر تم</h3>
+        <button id="colorBtn" class="btn">
+          <i class="fas fa-swatchbook"></i> تغییر رنگ پس‌زمینه
+        </button>
+      </section>
+    </div>
+
+    <div class="theme-switcher">
+      <div class="theme-btn" id="themeToggle" title="تغییر تم">
+        <i class="fas fa-moon"></i>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
 
