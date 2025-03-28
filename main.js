@@ -230,3 +230,85 @@ console.log(result); // خروجی: 8
 greet("kourosh")
 greetArrow("hamid")
 
+//-------------------------------------------------
+// عملگرهای محاسباتی (Arithmetic Operators)
+
+let a = 10;
+let b = 3;
+
+console.log(a + b); // 13
+console.log(a - b); // 7
+console.log(a * b); // 30
+console.log(a / b); // 3.333...
+console.log(a % b); // 1
+console.log(a ** b); // 1000
+console.log(a++); // 10 (پس از نمایش مقدار، a به 11 افزایش می‌یابد)
+console.log(--b); // 2 (قبل از نمایش مقدار، b به 2 کاهش می‌یابد)
+
+//-------------------------------------------------
+// عملگرهای مقایسه‌ای (Comparison Operators)
+
+let c = 10;
+let d = "10";
+
+console.log(c == d); // true (مقادیر برابرند)
+console.log(c === d); // false (مقادیر برابرند اما نوع‌ها متفاوتند)
+console.log(c != d); // false (مقادیر برابرند)
+console.log(c !== d); // true (مقادیر برابرند اما نوع‌ها متفاوتند)
+console.log(c > 5); // true
+console.log(c < 20); // true
+console.log(c >= 10); // true
+console.log(c <= 9); // false
+
+//-------------------------------------------------
+// عملگرهای منطقی (Logical Operators)
+// && (AND منطقی)
+// || (OR منطقی)
+// ! (NOT منطقی)
+
+let e = true;
+let f = false;
+
+console.log(e && f); // false (هر دو باید true باشند)
+console.log(e || f); // true (حداقل یکی باید true باشد)
+console.log(!e); // false (معکوس مقدار بولین)
+
+//-------------------------------------------------
+// عملگرهای شرطی (Conditional (Ternary) Operator)
+
+let age = 18;
+let status1 = (age >= 18) ? 'بزرگسال' : 'نوجوان';
+console.log(status1); // بزرگسال
+
+//-------------------------------------------------
+// Arrays
+
+let names = ["ali", "fatemeh", "kourosh", "maryam"];
+
+let Names = new Array("kimia", "hamid");
+
+console.log(names[2]);
+
+names[0] = "hamid";
+
+console.log(names.length);
+
+names.push("danial");
+
+names.pop();
+
+names.unshift("danial");
+
+names.shift("danial");
+
+for (let i = 0; i < names.length; i++) {
+  console.log(names[i]);
+}
+
+names.forEach((value, index) => {
+  console.log(index + " : " + value);
+});
+
+names.indexOf("kourosh");
+
+names.splice(1, 2);
