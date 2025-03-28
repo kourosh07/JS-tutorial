@@ -193,6 +193,7 @@ h3 {
   background-color: var(--light-color);
   border-radius: var(--border-radius);
   border-left: 4px solid var(--success-color);
+  display: none;
 }
 
 form {
