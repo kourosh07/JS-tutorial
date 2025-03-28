@@ -10,4 +10,9 @@
 https://github.com/kourosh07/JS-tutorial.git
 ```
 
-## <img src="https://cdn.ituring.ir/research/76/turing%20(2).png" alt="pic" align="center" width="40px">
+##
+
+### ✨ ارائه شده توسط تیم پژوهشی تورینگ  <img src="https://github.com/kourosh07/kourosh07/blob/main/turing%20(1)_prev_ui.png" alt="turinglogo" border="0" align="center" width="120px">
+
+### ✨ پیروز و سربلند باشید  :rose::heart:
+
