@@ -9,7 +9,7 @@
 
 1. پروژه را کلون کنید:
 ```bash
-https://github.com/kourosh07/JS-tutorial.git
+git clone https://github.com/kourosh07/JS-tutorial.git
 ```
 
 ##
