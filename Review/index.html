@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>آموزش جاوااسکریپت</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.ituring.ir/research/76/turing%20%282%29.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main class="app-container">
+      <header class="app-header">
+        <h1 class="app-title">آموزش مفاهیم پایه جاوااسکریپت</h1>
+        <p class="app-description">ارائه شده توسط تیم پژوهشی تورینگ</p>
+      </header>
+
+      <div class="concepts-grid">
+        <!-- مفهوم 1: متغیرها -->
+        <section class="concept-card">
+          <div class="card-header">
+            <h2>متغیرها و انواع داده</h2>
+            <span class="icon">📊</span>
+          </div>
+          <p class="card-description">
+            آشنایی با let, const و انواع داده‌های پایه
+          </p>
+          <button class="btn primary-btn" onclick="showVariables()">
+            نمایش متغیرها
+          </button>
+        </section>
+
+        <!-- مفهوم 2: توابع -->
+        <section class="concept-card">
+          <div class="card-header">
+            <h2>توابع</h2>
+            <span class="icon">🔧</span>
+          </div>
+          <p class="card-description">
+            تعریف و استفاده از توابع در جاوااسکریپت
+          </p>
+          <button class="btn primary-btn" onclick="callFunctions()">
+            اجرای توابع
+          </button>
+        </section>
+
+        <!-- مفهوم 3: حلقه‌ها -->
+        <section class="concept-card">
+          <div class="card-header">
+            <h2>حلقه‌ها</h2>
+            <span class="icon">🔄</span>
+          </div>
+          <p class="card-description">انواع حلقه‌ها و کاربردهای آن‌ها</p>
+          <button class="btn primary-btn" onclick="runLoops()">
+            اجرای حلقه‌ها
+          </button>
+        </section>
+
+        <!-- مفهوم 4: رویدادها -->
+        <section class="concept-card">
+          <div class="card-header">
+            <h2>رویدادها</h2>
+            <span class="icon">🖱️</span>
+          </div>
+          <p class="card-description">مدیریت رویدادها در جاوااسکریپت</p>
+          <button class="btn secondary-btn" id="eventBtn">کلیک کنید</button>
+        </section>
+
+        <!-- مفهوم 5: DOM -->
+        <section class="concept-card">
+          <div class="card-header">
+            <h2>مدیریت DOM</h2>
+            <span class="icon">🖥️</span>
+          </div>
+          <p class="card-description">تغییر عناصر صفحه با جاوااسکریپت</p>
+          <div class="input-group">
+            <input
+              type="text"
+              id="nameInput"
+              class="text-input"
+              placeholder="نام شما..."
+            />
+            <button class="btn accent-btn" onclick="greetUser()">سلام</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- بخش نمایش خروجی -->
+      <section class="output-section">
+        <h2 class="output-title">نتیجه اجرای کد</h2>
+        <div id="output" class="output-box">
+          <p class="placeholder-text">
+            خروجی اجرای هر بخش اینجا نمایش داده می‌شود...
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
