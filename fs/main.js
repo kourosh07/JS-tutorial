@@ -48,3 +48,38 @@ fs.renameSync("./data.txt", "./1/data3.txt")
 
 fs.unlinkSync("./data.txt")
 
+// JSON (Java Script Object Notation)
+
+let obj = {
+  Name: "kourosh",
+  age: 20,
+  skills: ["js", "react", "python"],
+  x: {
+    1: "1",
+    2: "2",
+  },
+};
+
+// stringify()
+
+let s = JSON.stringify(obj)
+
+fs.writeFileSync("./data.json", s)
+
+let p = fs.readFileSync("./data.json")
+
+// parse()
+
+let x = JSON.parse(p)
+
+console.log(x);
+
+for(let i = 0; i < 100; i++){
+  obj[i.toString()] = i
+}
+
+let m = JSON.stringify(obj, null, 2)
+
+console.log(m);
+
+fs.writeFileSync("./data.json", m)
