@@ -170,9 +170,9 @@ while (i < 5) {
 
 let j = 0
 do {
-    console.log("Iteration number: " + i)
-    i++;
-} while (i < 5)
+    console.log("Iteration number: " + j)
+    j++;
+} while (j < 5)
 
 //-------------------------------------------------
 // for...of
