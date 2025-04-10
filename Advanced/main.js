@@ -185,6 +185,45 @@ const uniqueNum = [...new Set(numbers)];
 
 console.log(uniqueNum);
 
+// setTimeout
 
+setTimeout(() => {
+  //console.log("this message show in 2 second");
+}, 2000);
+
+const showmessage = (message, name) => {
+  console.log(`${message}, ${name} !`);
+};
+
+let hi = setTimeout(showmessage, 3000, "kourosh", "hi");
+
+clearTimeout(hi);
+
+console.log("---------------------------------\n");
+
+// SetInterval
+
+let count = 5;
+
+const countDown = setInterval(() => {
+  //console.log(count);
+  count--;
+
+  if (count < 4) {
+    clearInterval(countDown);
+  }
+}, 1000);
+
+function showTime() {
+  const now = new Date().getHours();
+  console.log(now);
+}
+
+const clock = setInterval(showTime, 1000);
+
+setTimeout(() => {
+  clearInterval(clock);
+  console.log("clock paused!");
+}, 10000);
 
 
