@@ -125,3 +125,28 @@ for (let student of x){
         console.log(student.fname)
     }
 }
+
+// Map
+
+const myMap = new Map()
+
+myMap.set("name", "kourosh")
+myMap.set(1, "number")
+myMap.set(true, "bollean")
+
+
+console.log(myMap.get("name"))
+console.log(myMap.get(1))
+
+console.log(myMap.has("name"))
+
+myMap.delete(1)
+
+console.log(myMap.size)
+
+myMap.forEach((value, key)=>{
+    console.log(key,"+" + value)
+}
+)
+
+console.log([...myMap])
