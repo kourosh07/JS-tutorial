@@ -84,6 +84,19 @@ console.log(m);
 
 fs.writeFileSync("./data.json", m)
 
+// try-catch
+
+try {
+  let s = fs.readFileSync("./data.json", "utf8");
+
+  let obj = JSON.parse(s);
+
+  console.log(obj["Name"]);
+} catch (e) {
+  console.log("EROR: \n" + e);
+}
+
+
 // Working with JSON
 
 const fs = require("fs")
