@@ -83,3 +83,47 @@ let m = JSON.stringify(obj, null, 2)
 console.log(m);
 
 fs.writeFileSync("./data.json", m)
+
+// Working with JSON
+
+const fs = require("fs")
+
+console.clear()
+
+let db = [
+    {
+        fname : "kourosh",
+        lname : "rahimi",
+        score : 5
+    },
+    {
+        fname : "haimd",
+        lname : "rahimi",
+        score : 19
+    },
+    {
+        fname : "ali",
+        lname : "rezaei",
+        score : 15
+    }
+]
+
+
+fs.writeFileSync("./data.json", JSON.stringify(db, null, 2))
+
+let x = JSON.parse(fs.readFileSync("./data.json", "utf8"))
+
+console.log(x)
+
+for (let student of x){
+    student.score++
+    console.log(student, "\n--------------\n")
+}
+
+for (let student of x){
+    if (student.lname === "rahimi"){
+        console.log(student.fname)
+    }
+}
+
+
