@@ -150,3 +150,41 @@ myMap.forEach((value, key)=>{
 )
 
 console.log([...myMap])
+
+// Set
+
+const mySet = new Set();
+
+mySet.add(1);
+mySet.add(2);
+mySet.add(3);
+mySet.add("3");
+mySet.add({ name: "kourosh" });
+
+console.log(mySet.size);
+
+console.log(mySet.has(2));
+
+mySet.delete(3);
+
+mySet.forEach((value, key) => {
+  console.log(`${key} : ${value}`);
+});
+
+console.log([...mySet]);
+
+console.log(mySet);
+
+console.log("--------------------------");
+
+const numbers = [1, 2, 3, 3, 3, 4, 4, 5];
+
+console.log(numbers);
+
+const uniqueNum = [...new Set(numbers)];
+
+console.log(uniqueNum);
+
+
+
+
