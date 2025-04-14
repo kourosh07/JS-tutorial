@@ -239,4 +239,162 @@ setTimeout(() => {
   console.log("clock paused!");
 }, 10000);
 
+// Promise
+
+console.log("hi");
+console.log("bye");
+console.log("Turing");
+
+setTimeout(() => {
+  console.log("kourosh");
+}, 2000);
+
+let greeting = (Name) => console.log(`hello ${Name}`);
+
+const userInfo = (fname, lname, callBack) => {
+    const fullName = `${fname} ${lname}`
+    callBack(fullName)
+}
+
+// ES => Promise
+
+const hasMeet = false;
+
+const meeting = new Promise((resolve, reject) => {
+  if (!hasMeet) {
+    const meetDetail = {
+      Name: "Turing",
+      location: "Shiraz",
+      time: 11,
+    };
+    resolve(meetDetail);
+  } else {
+    reject(new Error("Meeting cancelled..."));
+  }
+});
+
+meeting.then((res) => console.log(res)).catch((rej) => console.log(rej));
+
+const addCalender = (meetDetail) => {
+  return new Promise((resolve, reject) => {
+    const callender = `${meetDetail.Name} meeting is scheduled at ${meetDetail.time} in ${meetDetail.location}`;
+    resolve(callender);
+  });
+};
+
+const addCalender = (meetDetail) => {
+  const callender = `${meetDetail.Name} meeting is scheduled at ${meetDetail.time} in ${meetDetail.location}`;
+  return Promise.resolve(callender);
+};
+
+meeting
+  .then(addCalender)
+  .then((res) => console.log(res))
+  .catch((rej) => console.log(rej));
+
+const promise1 = Promise.resolve("promise1 completed");
+const promise2 = new Promise((res, rej) => {
+  setTimeout(() => {
+    res("promise2 completed");
+  }, 2000);
+});
+
+promise1.then((res) => console.log(res));
+promise2.then((res) => console.log(res));
+
+Promise.all([promise1, promise2]).then((res) => console.log(res))
+
+function getMessage(callBack) {
+  setTimeout(function () {
+    callBack("hello callBack");
+  }, 2000);
+}
+
+function myfunc(message) {
+  console.log(message);
+}
+
+getMessage(myfunc);
+
+function getMessage(callBack) {
+  return new Promise((resolve, reject) => {
+    setTimeout(function () {
+      callBack("hello callBack");
+    }, 2000);
+  });
+}
+
+function myfunc(message) {
+  console.log(message);
+}
+
+getMessage(myfunc);
+
+// sync
+
+function myfunc1 (){
+    return "hello"
+}
+
+console.log(myfunc1());
+
+// async
+// pending - fullfilled - rejected
+
+async function myfunc (){
+    return "hello"
+}
+
+console.log(myfunc());
+
+const hasMeet = false;
+
+const meeting = new Promise((resolve, reject) => {
+  if (!hasMeet) {
+    const meetDetail = {
+      Name: "Turing",
+      location: "Shiraz",
+      time: 11,
+    };
+    resolve(meetDetail);
+  } else {
+    reject(new Error("Meeting cancelled..."));
+  }
+});
+
+const addCalender = (meetDetail) => {
+  const callender = `${meetDetail.Name} meeting is scheduled at ${meetDetail.time} in ${meetDetail.location}`;
+  return Promise.resolve(callender);
+};
+
+async function Mymeet() {
+    const meetDetail = await meeting
+    const message = await addCalender(meetDetail)
+    console.log(message);
+}
+
+Mymeet()
+
+const func1 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("first func");
+      resolve("resolved after 3 sec");
+    }, 3000);
+  });
+};
+
+const func2 = async () => {
+  console.log("calling first func");
+  const result = await func1();
+  console.log(result);
+};
+
+func2();
+
+console.log("End...");
+
+
+
+
 
